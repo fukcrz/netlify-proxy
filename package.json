@@ -1,0 +1,11 @@
+{
+  "name": "netlify-proxy",
+  "version": "1.0.0",
+  "scripts": {},
+  "packageManager": "pnpm@10.18.3",
+  "devDependencies": {
+    "@netlify/edge-functions": "^3.0.2",
+    "@types/deno": "^2.5.0",
+    "netlify-cli": "^23.11.1"
+  }
+}

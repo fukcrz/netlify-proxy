@@ -13,6 +13,14 @@ export default async (request: Request, context: Context) => {
   const url = new URL(request.url);
   const newUrl = `${targetUrl}${url.pathname}${url.search}`;
 
+  const host = URL.parse(targetUrl)?.host
+
+  if (host) {
+    request.headers.set("host", host)
+  } else {
+    request.headers.delete("host")
+  }
+
   // Forward the request
   return fetch(newUrl, {
     method: request.method,
